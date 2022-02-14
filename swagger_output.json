@@ -1,0 +1,83 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/users": {
+      "post": {
+        "description": "Route for create user. ***Please, use double quotes for string parameters ***",
+        "parameters": [
+          {
+            "name": "name",
+            "description": "User's name.",
+            "required": true,
+            "in": "body",
+            "example": "'John Doe'",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "email",
+            "description": "User's email.",
+            "required": true,
+            "in": "body",
+            "example": "'user@email.com'",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "password",
+            "description": "User's password (min length: 5).",
+            "required": true,
+            "in": "body",
+            "example": "'sdij12eh0f1'",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/auth": {
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
