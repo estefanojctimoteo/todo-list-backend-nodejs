@@ -1,3 +1,3 @@
 # todo-list-backend-nodejs
 
-## please execute "npm run service:dev"
+## A todo list backend built with Nodejs and Express
